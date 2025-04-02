@@ -1,4 +1,4 @@
-from typing import Any, Dict, List
+from typing_extensions import Any, Dict, List
 import free_range_rust
 from free_range_zoo.utils.agent import Agent
 
