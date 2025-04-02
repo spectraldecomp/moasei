@@ -1,0 +1,29 @@
+[project]
+name = "free-range-zoo-docs"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "C4 Patino", email = "cpatino2@huskers.unl.edu" },
+    { name = "Daniel Redder", email = "daniel.redder@uga.edu" }
+]
+license = {text = "AGPL-3.0-or-later"}
+readme = "README.md"
+
+requires-python = "^3.10.0"
+dependencies = [
+	"furo @ git+https://github.com/oasys-mas/Celshast.git",
+	"myst-parser (>=4.0.1,<5.0.0)",
+	"sphinx (>=7.4.7,<8.0.0)",
+	"sphinx-autobuild (>=2024.10.3,<2025.0.0)",
+	"sphinx-github-changelog (>=1.4.0,<2.0.0)",
+]
+
+[tool.poetry.scripts]
+gen = "free_range_zoo_docs:gen"
+sync = "free_range_zoo_docs:sync"
+build = "free_range_zoo_docs:build"
+watch = "free_range_zoo_docs:watch"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
